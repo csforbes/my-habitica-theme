@@ -1,0 +1,75 @@
+/* ==UserStyle==
+@name           Habitica Personal
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document url-prefix("https://habitica.com/") {
+    body {
+        overscroll-behavior-y: none;
+        overscroll-behavior-x: none;
+    }
+    #app-header {
+        position: fixed !important;
+        width: 100%;
+        z-index: 1000 !important;
+        filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.8));
+    }
+    .sticky {
+        margin-top: 165px;
+    }
+    .card,
+    .groupHR {
+        margin-bottom: 5px !important;
+    }
+    h1 {
+        margin-bottom: 0 !important;
+    }
+    .pm-disabled-caption {
+        width: 100% !important;
+        padding-bottom: 15px !important;
+    }
+    .quick-add[data-v-a51310ce],
+    .quick-add[data-v-a51310ce]:hover {
+        border-bottom: 1px solid #fff !important;
+        margin-bottom: 0 !important;
+    }
+    .topbar {
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+    }
+    .habitica-top-banner {
+        position: fixed !important;
+        margin-top: 55px;
+        margin-bottom: -55px;
+        z-index: 1000 !important;
+    }
+    #participant-list___BV_modal_body_ {
+        padding-top: 15px;
+    }
+    .container-fluid {
+    padding-top: 55px !important;
+}
+    .inline-dropdown .dropdown-toggle:after {
+        border-top-color: black;
+    }
+    .due-overdue .svg-icon {
+        fill: #f74e52;
+    }
+    #members-modal___BV_modal_body_ .dropdown-icon-item .svg-icon {
+        filter: grayscale(100%) !important;
+        filter: brightness(100) !important;
+    }
+    .quick-add-tip[data-v-a51310ce],
+    footer,
+    .tags-select,
+    .column-background[data-v-a51310ce],
+    .tasks-navigation,
+    .box hr,
+    .chatMessage.userPoster .bubble::after {
+        display: none !important;
+    }
+}
