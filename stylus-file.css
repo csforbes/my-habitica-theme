@@ -1,100 +1,70 @@
 @-moz-document url-prefix("https://habitica.com/") {
 /* ==UserStyle==
-@name           Habitica Personal
+@name           Helix's Habitica Dark
 @version        2.6.9
 @description    This is a theme for Habitica that changes the UI to something more comfortable to the eye, especially at night. I have tried to stick to the official colours of Habitica where possible. Tested on Chrome, should work on Firefox and Edge. This is a personal project and will be updated as such.
 @author         tripplehelix
 @license        CC-BY-4.0
-@namespace https://github.com/csforbes/my-habitica-theme/blob/main/stylus-file.css
+@namespace https://greasyfork.org/users/697440
 ==/UserStyle== */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
-body {
-        overscroll-behavior-y: none;
-        overscroll-behavior-x: none;
-    }
-    #app-header {
-        position: fixed !important;
-        width: 100%;
-        z-index: 1000 !important;
-        background-color: #1E1E1E !important;
-        filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.8));
-        /* background-image: url(https://3.bp.blogspot.com/-rHGW-Pj086E/XJqrXq3DJlI/AAAAAAAABB0/kRGUxP_OqkUmicF3bW129ubAa0myCJs9ACKgBGAs/w1366-h768-c/sunset-horizon-scenery-landscape-art-uhdpaper.com-4K-178.jpg) !important;
-        background-repeat: no-repeat !important;*/
-
-        
-    }
-    .sticky {
-        margin-top: 165px;
-    }
-    .card,
-    .groupHR {
-        margin-bottom: 5px !important;
-    }
-    h1 {
-        margin-bottom: 0 !important;
-    }
-    .pm-disabled-caption {
-        width: 100% !important;
-        padding-bottom: 15px !important;
-    }
-    .quick-add[data-v-f1439e8c],
-    .quick-add[data-v-f1439e8c]:hover {
-        border-bottom: 1px solid #fff !important;
-        margin-bottom: 0 !important;
-    }
-    .topbar {
-        position: fixed !important;
-        top: 0 !important;
-        width: 100% !important;
-        background-color: black !important;
-        filter: drop-shadow(0 5px 5px rgba(0,0,0, 0.5));
-        background-image: none !important;
-    }
-    .habitica-top-banner {
-        position: fixed !important;
-        margin-top: 55px;
-        margin-bottom: -55px;
-        z-index: 1000 !important;
-
-    }
-    .view-party {
-        background-image: none !important;
-    }
-    .top-menu-icon {
-        color: white !important;
-    }
-    .top-menu-icon :hover {
-       color: rgb(213, 200, 255);
-    }
-    #participant-list___BV_modal_body_ {
-        padding-top: 15px;
-    }
-    .container-fluid {
-    padding-top: 55px !important;
-    }
-    .inline-dropdown .dropdown-toggle:after {
-        border-top-color: black;
-    }
-    .due-overdue .svg-icon {
-        fill: #f74e52;
-    }
-    #members-modal___BV_modal_body_ .dropdown-icon-item .svg-icon {
-        filter: grayscale(100%) !important;
-        filter: brightness(100) !important;
-    }
-    #app-header-row {
-        
-    }
-   
+body > div:not(.popover) {
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
     
-    /*begin habitica dark*/
-:focus {
+    :focus {
     outline: unset !important;
 }
 .chatBox {
     font-size: 1.2em !important;
 }
-
+*,
+.task-better-modal-headings,
+.task-better-modal-text,
+.dropdown-item,
+.dropdown-item:hover,
+.hover-foreground[data-v-144f9604],
+.filter[data-v-c7f9d204],
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover,
+.task-neutral-modal-headings,
+.task-neutral-modal-text,
+.item[data-v-2ae7992c],
+.item,
+.btn-show-more,
+#buy-quest-modal .right-sidebar,
+.modal-body .popover-content-attr,
+.full-width[data-v-7a22a3be],
+.conversations[data-v-7a22a3be],
+#avatar-modal #backgrounds .background-set,
+.filter[data-v-c7f9d204]:hover,
+.task-title[data-v-02609699],
+.task-best-modal-headings,
+.task-best-modal-text,
+textarea,
+h1[data-v-4052e15e],
+a.leader[data-v-e895429a],
+.price-label.gold[data-v-2ae7992c],
+.task-good-modal-headings,
+.task-good-modal-text,
+.task-worst-modal-text,
+.task-purple-modal-text,
+.dropdown.open .dropdown-menu[data-v-6b6f97f6],
+.filter.active[data-v-c7f9d204],
+.task-reward-control-bg .small-text,
+.task-bad-modal-headings,
+.task-bad-modal-text {
+    color: #ffffff !important;
+}
 .card .gold .member-count[data-v-fa64579e],
 .card .gold[data-v-fa64579e],
 .card .silver .member-count[data-v-fa64579e],
@@ -126,7 +96,7 @@ body {
     color: #f74e52 !important;
 }
 body,
-.tasks-list[data-v-f1439e8c],
+.tasks-list[data-v-c7f9d204],
 #buy-modal .modal-footer,
 #task-modal input,
 #task-modal textarea,
@@ -155,10 +125,12 @@ body,
 #private-message .header-bar,
 .groupHR,
 #participant-list .modal-footer {
-    background-color: #E4E4E4 !important;
+    background-color: #271b3d !important;
 }
-
-
+.btn-secondary {
+    background-color: #4f2a93 !important;
+}
+.badge-purple,
 .badge-default,
 .slider-button,
 .category-label,
@@ -176,9 +148,193 @@ body,
 .task-content[data-v-02609699],
 .card-body[data-v-4ce44a78],
 .toggle-checkbox.checked[data-v-17699435],
-.task-content[data-v-4d3c31d9],
+.task-content[data-v-3f186052],
 #sell-modal .modal-footer {
-    background-color: #F5F5F5 !important;
+    background-color: #573496 !important;
+}
+.input-group:not(.checklist-group) .input-group-append,
+.input-group:not(.checklist-group) .input-group-prepend,
+.input-group input,
+.dropdown-item,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.dropdown > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled).active,
+.dropdown > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled):active,
+.select-multi .dropdown-header,
+.btn-secondary:active,
+#task-modal input:active:not(:disabled),
+#task-modal input:focus:not(:disabled),
+#task-modal input:hover:not(:disabled),
+#task-modal textarea:active:not(:disabled),
+#task-modal textarea:focus:not(:disabled),
+#task-modal textarea:hover:not(:disabled),
+.modal-header,
+input,
+input.form-control,
+textarea,
+textarea.form-control,
+.btn-primary.disabled,
+.btn-primary:disabled,
+.badge-equip.is-equipped:hover,
+.bordered-item .item,
+.badge-pin[data-v-47c03167],
+.chat-row textarea,
+.icon[data-v-283c054f],
+.questRewards .reward-item[data-v-245218bd],
+.form-control:focus,
+.subscribe-card,
+.subscribe-card .bg-gray-700,
+.sidebar,
+.tag[data-v-aef69f00],
+.full-width[data-v-e6e716f4],
+#private-message .disable-background,
+.dropdown-item.dropdown-inactive.active,
+.dropdown-item.dropdown-inactive:active,
+.dropdown-item.dropdown-inactive:hover,
+.badge-equip,
+.card[data-v-fa64579e],
+.conversation[data-v-00e3fa3c]:hover,
+.dropdown > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled):hover,
+.show > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled):hover,
+.challenge .well[data-v-35e659de],
+.side-panel[data-v-53ab197a],
+.spell,
+.category-box,
+.category-select,
+.apply-options,
+#chatWrapper .chatBox_content,
+#groupsBox .groupsBox_content,
+.collapse-checklist {
+    background-color: #4e4a57 !important;
+}
+.dropdown > .btn-secondary.dropdown-toggle:not(.btn-success):active,
+.show > .btn-secondary.dropdown-toggle:not(.btn-success):active,
+.show > .btn-secondary.dropdown-toggle:not(.btn-success):focus,
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover,
+.item.item-empty,
+input,
+input.form-control,
+textarea,
+textarea.form-control,
+.create-dropdown[data-v-6e58c381] form.b-dropdown-form,
+.form-control[data-v-757a1a7c],
+#achievements .achievement-list-item .badge,
+#private-message .messages-column,
+.outer-option-background.active .option[data-v-5d0229fc],
+#avatar-modal #backgrounds .purchase-background,
+#task-modal input,
+#task-modal textarea,
+.tier-list li[data-v-9b3c098e],
+#private-message .messages-column .empty-messages,
+.messages-column .message-scroll[data-v-7a22a3be],
+.bg-gray-700[data-v-ad88e024],
+.messages-column .empty-messages[data-v-e6e716f4],
+.messages-column .message-scroll[data-v-e6e716f4],
+.messages-column[data-v-e6e716f4],
+.multi-item[data-v-5fb3885b],
+icon-item,
+.task-disabled-habit-control-bg,
+.stats-column[data-v-20edc046],
+.side-panel[data-v-4cf93156],
+.group-item,
+.chatBox_input {
+    background-color: #6c757d !important;
+}
+.btn-secondary:not(:disabled):not(.disabled):hover,
+.input-group-spaced,
+.tag[data-v-5cdfd8b6],
+.box[data-v-5cdfd8b6],
+.header-bar[data-v-7a22a3be],
+.box[data-v-aef69f00],
+#buy-gems .modal-header,
+.challenge[data-v-35e659de],
+.chatMessage .bubble,
+.box {
+    background-color: #6133b4 !important;
+}
+.autocomplete-selection,
+.at-highlight {
+    background-color: #343a40 !important;
+}
+.dropdown.open .dropdown-menu[data-v-6b6f97f6] {
+    background-color: #271b3d !important;
+}
+.vdp-datepicker .vdp-datepicker__calendar .datetime-buttons,
+.vdp-datepicker .vdp-datepicker__calendar header,
+.nav-link[data-v-535ed182]:hover,
+.conversation.active[data-v-00e3fa3c],
+.reward-control,
+.group-item:hover,
+.group-item.openChatBox {
+    background-color: #6f42c1 !important;
+}
+.unreadMessages,
+.pm-disabled-caption {
+    background-color: #ffc107 !important;
+}
+.secondary-menu[data-v-535ed182],
+.standard-sidebar,
+#avatar-modal .customize-section,
+.alert-info,
+.alert-warning,
+.conversations[data-v-e6e716f4],
+.chatBox_input button,
+.groupsBox_title,
+#chatWrapper .chatBox_title,
+.chatBox_shower,
+.chatBox,
+#groupsBox .groupsBox_shower,
+#groupsBox,
+.standard-page .item-with-icon:not(.gem-bank) {
+    background-color: #432867 !important;
+}
+.card,
+.gear.box[data-v-20edc046],
+.left-panel .quest-col .quest-wrapper[data-v-53ab197a],
+.white[data-v-20edc046],
+.quick-add[data-v-c7f9d204],
+.quick-add[data-v-c7f9d204]:hover,
+.icon-item[data-v-283c054f],
+.task,
+#yesterdaily___BV_modal_body_ .tasks-list {
+    background-color: unset !important;
+}
+.tier-list li,
+blockquote[data-v-3b652935],
+.gem-deck,
+.well[data-v-20edc046],
+#achievements .box,
+#achievements .box.achievement-unearned,
+.box[data-v-20edc046],
+.box[data-v-9a117276],
+.dropdown > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled):hover,
+.show > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled):hover,
+.actions .btn-group[data-v-757a1a7c]:active {
+    background: unset !important;
+}
+.dropdown > .btn-secondary.dropdown-toggle:not(.btn-success),
+.show > .btn-secondary.dropdown-toggle:not(.btn-success),
+.spell,
+.autocomplete-selection,
+.icon-item[data-v-283c054f],
+.group-item,
+.group-item:hover {
+    box-shadow: none !important;
+}
+.left-panel[data-v-53ab197a] {
+    box-shadow: 0 2px 16px 0 rgb(26 24 29 / 32%)
+}
+.task-content[data-v-02609699] {
+    box-shadow: 0px 0px 5px #00002A;
+}
+.standard-page .item-with-icon:not(.gem-bank),
+.card-body[data-v-4ce44a78] {
+    box-shadow: 0px 0px 1px #00002A !important;
 }
 .toggle-checkbox[data-v-17699435]:not(.disabled):not(:disabled):active,
 .toggle-checkbox[data-v-17699435]:not(.disabled):not(:disabled):focus,
@@ -192,10 +348,10 @@ button:focus {
 .group-item:hover,
 .chatBox_input textarea,
 .chatBox_input,
-[data-v-4d3c31d9]:focus {
+[data-v-3f186052]:focus {
     border: none !important;
 }
-    .spell,
+.spell,
 .btn-secondary:not(:disabled):not(.disabled):hover,
 .dropdown > .btn-secondary.dropdown-toggle:not(.btn-success):not(:disabled):not(.disabled):hover {
     border: 1px solid #000;
@@ -203,7 +359,7 @@ button:focus {
 .spell:hover:not(.disabled) {
     border: 1px solid #6610f2;
 }
-.filter.active[data-v-a51310ce] {
+.filter.active[data-v-c7f9d204] {
     border-bottom: 2px solid #fff !important;
 }
 .modal-header,
@@ -237,6 +393,44 @@ textarea,
 .card-left {
     border: none !important;
 }
+.header-wrap[data-v-1fa1404c] {
+    background-image: none !important;
+}
+.positive-icon[data-v-67664c4d] {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+#invite-modal___BV_modal_outer_ .modal-content,
+.tasks-list[data-v-49d1d854] {
+    padding: 0px !important;
+}
+.gear.box[data-v-20edc046],
+.left-panel .quest-col .quest-wrapper[data-v-53ab197a],
+#achievements .box[data-v-367a6e32],
+#achievements .box.achievement-unearned[data-v-367a6e32],
+.white[data-v-20edc046],
+.box[data-v-9a117276] {
+    box-shadow: none !important;
+}
+.quest-active-section .quest-box[data-v-55afabf7] {
+    background-image: unset !important;
+}
+.card,
+.groupHR {
+    margin-bottom: 5px !important;
+}
+h1 {
+    margin-bottom: 0 !important;
+}
+.pm-disabled-caption {
+    width: 100% !important;
+    padding-bottom: 15px !important;
+}
+.quick-add[data-v-c7f9d204],
+.quick-add[data-v-c7f9d204]:hover {
+    border-bottom: 1px solid #fff !important;
+    margin-bottom: 0 !important;
+}
 .topbar {
     position: fixed !important;
     top: 0 !important;
@@ -263,12 +457,11 @@ textarea,
     filter: grayscale(100%) !important;
     filter: brightness(100) !important;
 }
-.quick-add-tip[data-v-f1439e8c],
+.quick-add-tip[data-v-c7f9d204],
 footer,
-/*.tags-select,*/
-.column-background[data-v-f1439e8c],
+.tags-select,
+.column-background[data-v-c7f9d204],
 .tasks-navigation,
-#create-task-btn,
 .box hr,
 .chatMessage.userPoster .bubble::after {
     display: none !important;
